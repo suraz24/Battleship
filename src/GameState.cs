@@ -3,7 +3,11 @@
 /// This is used to control the actions and view displayed to
 /// the player.
 /// </summary>
+/// 
 
+
+namespace MyGame
+{
 public enum GameState
 {
 	/// <summary>
@@ -45,4 +49,5 @@ public enum GameState
 	/// The player has quit. Show ending credits and terminate the game
 	/// </summary>
 	Quitting
+}
 }
