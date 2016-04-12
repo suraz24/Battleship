@@ -1,5 +1,7 @@
 ﻿using System;
 
+namespace MyGame
+{
 
 
 /// <summary>
@@ -32,4 +34,5 @@ public enum TileView
 	/// something was hit
 	/// </summary>
 	Hit
+}
 }

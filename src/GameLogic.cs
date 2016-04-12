@@ -1,5 +1,8 @@
 ﻿using System;
+using SwinGameSDK;
 
+namespace MyGame
+{
 class GameLogic
 {
 	/// <summary>
@@ -26,4 +29,5 @@ class GameLogic
 		//Free Resources and Close Audio, to end the program.
 		FreeResources();
 	}
+}
 }
