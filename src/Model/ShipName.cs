@@ -1,39 +1,40 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
 
-/// <summary>
-/// The names of all of the ships in the game
-/// </summary>
-public enum ShipName
+namespace MyGame
 {
 	/// <summary>
-	/// No boat (0 spaces)
+	/// The names of all of the ships in the game
 	/// </summary>
-	None = 0,
+	public enum ShipName
+	{
+		/// <summary>
+		/// No boat (0 spaces)
+		/// </summary>
+		None = 0,
 
-	/// <summary>
-	/// Tugboat (1 space)
-	/// </summary>
-	Tug = 1,
+		/// <summary>
+		/// Tugboat (1 space)
+		/// </summary>
+		Tug = 1,
 
-	/// <summary>
-	/// Submarine (2 spaces)
-	/// </summary>
-	Submarine = 2,
+		/// <summary>
+		/// Submarine (2 spaces)
+		/// </summary>
+		Submarine = 2,
 
-	/// <summary>
-	/// Destroyer (3 spaces)
-	/// </summary>
-	Destroyer = 3,
+		/// <summary>
+		/// Destroyer (3 spaces)
+		/// </summary>
+		Destroyer = 3,
 
-	/// <summary>
-	/// Battleship (4 spaces)
-	/// </summary>
-	Battleship = 4,
+		/// <summary>
+		/// Battleship (4 spaces)
+		/// </summary>
+		Battleship = 4,
 
-	/// <summary>
-	/// Aircraft Carrier (5 spaces)
-	/// </summary>
-	AircraftCarrier = 5
+		/// <summary>
+		/// Aircraft Carrier (5 spaces)
+		/// </summary>
+		AircraftCarrier = 5
+	}
 }
-
