@@ -1,4 +1,8 @@
-﻿using SwinGameSDK;
+﻿using System;
+using SwinGameSDK;
+
+namespace MyGame
+{
 
 /// <summary>
 /// The DeploymentController controls the players actions
@@ -213,4 +217,5 @@ class DeploymentController
 
 		return ShipName.None;
 	}
+}
 }

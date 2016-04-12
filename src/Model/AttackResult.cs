@@ -1,4 +1,9 @@
-﻿/// <summary>
+﻿using System;
+
+namespace MyGame
+{
+
+/// <summary>
 /// AttackResult gives the result after a shot has been made.
 /// </summary>
 public class AttackResult
@@ -90,4 +95,5 @@ public class AttackResult
 
 		return Text + " " + _Ship.Name;
 	}
+}
 }

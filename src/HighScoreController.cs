@@ -1,5 +1,9 @@
 ﻿using System.IO;
 using SwinGameSDK;
+using System.Collections.Generic;
+
+namespace MyGame
+{
 
 /// <summary>
 /// Controls displaying and collecting high score data.
@@ -205,4 +209,5 @@ class HighScoreController
 			EndCurrentState();
 		}
 	}
+}
 }

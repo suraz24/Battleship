@@ -1,4 +1,11 @@
-﻿/// <summary>
+﻿using System;
+
+namespace MyGame
+{
+
+
+
+/// <summary>
 /// Tile knows its location on the grid, if it is a ship and if it has been 
 /// shot before
 /// </summary>
@@ -121,4 +128,5 @@ public class Tile
 			throw new ApplicationException("You have already shot this square");
 		}
 	}
+}
 }

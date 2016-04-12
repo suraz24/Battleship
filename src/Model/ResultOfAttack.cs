@@ -1,4 +1,11 @@
-﻿/// <summary>
+﻿
+
+namespace MyGame
+{
+
+
+
+/// <summary>
 /// The result of an attack.
 /// </summary>
 public enum ResultOfAttack
@@ -27,4 +34,5 @@ public enum ResultOfAttack
 	/// The player killed all of the opponents ships
 	/// </summary>
 	GameOver
+}
 }

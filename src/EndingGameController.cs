@@ -1,5 +1,8 @@
 ﻿using SwinGameSDK;
 
+namespace MyGame
+{
+
 /// <summary>
 /// The EndingGameController is responsible for managing the interactions at the end
 /// of a game.
@@ -34,5 +37,7 @@ static class EndingGameController
 			EndCurrentState();
 		}
 	}
+	
 
+}
 }

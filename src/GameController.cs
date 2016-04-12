@@ -1,4 +1,8 @@
 ﻿using SwinGameSDK;
+using System.Collections.Generic;
+
+namespace MyGame
+{
 
 /// <summary>
 /// The GameController is responsible for controlling the game,
@@ -384,4 +388,5 @@ public static class GameController
 		_aiSetting = setting;
 	}
 
+}
 }

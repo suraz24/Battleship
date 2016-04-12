@@ -1,4 +1,10 @@
-﻿/// <summary>
+﻿using System;
+using System.Collections.Generic;
+using SwinGameSDK;
+
+namespace MyGame
+{
+/// <summary>
 /// The AIMediumPlayer is a type of AIPlayer where it will try and destroy a ship
 /// if it has found a ship
 /// </summary>
@@ -118,4 +124,5 @@ public class AIMediumPlayer : AIPlayer
 			_Targets.Push(new Location(row, column));
 		}
 	}
+}
 }

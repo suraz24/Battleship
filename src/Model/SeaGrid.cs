@@ -1,4 +1,11 @@
-﻿/// <summary>
+﻿using System;
+using System.Collections.Generic;
+
+namespace MyGame
+{
+
+
+/// <summary>
 /// The SeaGrid is the grid upon which the ships are deployed.
 /// </summary>
 /// <remarks>
@@ -188,4 +195,5 @@ public class SeaGrid : ISeaGrid
 			}
 		}
 	}
+}
 }

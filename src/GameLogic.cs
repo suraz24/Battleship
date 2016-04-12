@@ -14,7 +14,7 @@ class GameLogic
 		SwinGame.OpenGraphicsWindow("Battle Ships", 800, 600);
 
 		//Load Resources
-		LoadResources();
+		GameResources.LoadResources();
 
 		SwinGame.PlayMusic(GameMusic("Background"));
 
@@ -27,7 +27,7 @@ class GameLogic
 		SwinGame.StopMusic();
 
 		//Free Resources and Close Audio, to end the program.
-		FreeResources();
+		GameResources.FreeResources();
 	}
 }
 }
