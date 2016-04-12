@@ -1,182 +1,185 @@
-﻿using Microsoft.VisualBasic;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
-/// <summary>
-/// A Ship has all the details about itself. For example the shipname,
-/// size, number of hits taken and the location. Its able to add tiles,
-/// remove, hits taken and if its deployed and destroyed.
-/// </summary>
-/// <remarks>
-/// Deployment information is supplied to allow ships to be drawn.
-/// </remarks>
-public class Ship
+namespace MyGame
 {
-	private ShipName _shipName;
-	private int _sizeOfShip;
-	private int _hitsTaken = 0;
-	private List<Tile> _tiles;
-	private int _row;
-	private int _col;
-	private Direction _direction;
-
 	/// <summary>
-	/// The type of ship
+	/// A Ship has all the details about itself. For example the shipname,
+	/// size, number of hits taken and the location. Its able to add tiles,
+	/// remove, hits taken and if its deployed and destroyed.
 	/// </summary>
-	/// <value>The type of ship</value>
-	/// <returns>The type of ship</returns>
-	public string Name
+	/// <remarks>
+	/// Deployment information is supplied to allow ships to be drawn.
+	/// </remarks>
+	public class Ship
 	{
-		get
+		private ShipName _shipName;
+		private int _sizeOfShip;
+		private int _hitsTaken = 0;
+		private List<Tile> _tiles;
+		private int _row;
+		private int _col;
+		private Direction _direction;
+
+		/// <summary>
+		/// The type of ship
+		/// </summary>
+		/// <value>The type of ship</value>
+		/// <returns>The type of ship</returns>
+		public string Name
 		{
-			if (_shipName == ShipName.AircraftCarrier)
+			get
 			{
-				return "Aircraft Carrier";
+				if (_shipName == ShipName.AircraftCarrier)
+				{
+					return "Aircraft Carrier";
+				}
+
+				return _shipName.ToString();
 			}
-
-			return _shipName.ToString();
 		}
-	}
 
-	/// <summary>
-	/// The number of cells that this ship occupies.
-	/// </summary>
-	/// <value>The number of hits the ship can take</value>
-	/// <returns>The number of hits the ship can take</returns>
-	public int Size
-	{
-		get
+		/// <summary>
+		/// The number of cells that this ship occupies.
+		/// </summary>
+		/// <value>The number of hits the ship can take</value>
+		/// <returns>The number of hits the ship can take</returns>
+		public int Size
 		{
-			return _sizeOfShip;
+			get
+			{
+				return _sizeOfShip;
+			}
 		}
-	}
 
-	/// <summary>
-	/// The number of hits that the ship has taken.
-	/// </summary>
-	/// <value>The number of hits the ship has taken.</value>
-	/// <returns>The number of hits the ship has taken</returns>
-	/// <remarks>When this equals Size the ship is sunk</remarks>
-	public int Hits
-	{
-		get
+		/// <summary>
+		/// The number of hits that the ship has taken.
+		/// </summary>
+		/// <value>The number of hits the ship has taken.</value>
+		/// <returns>The number of hits the ship has taken</returns>
+		/// <remarks>When this equals Size the ship is sunk</remarks>
+		public int Hits
 		{
-			return _hitsTaken;
+			get
+			{
+				return _hitsTaken;
+			}
 		}
-	}
 
-	/// <summary>
-	/// The row location of the ship
-	/// </summary>
-	/// <value>The topmost location of the ship</value>
-	/// <returns>the row of the ship</returns>
-	public int Row
-	{
-		get
+		/// <summary>
+		/// The row location of the ship
+		/// </summary>
+		/// <value>The topmost location of the ship</value>
+		/// <returns>the row of the ship</returns>
+		public int Row
 		{
-			return _row;
+			get
+			{
+				return _row;
+			}
 		}
-	}
 
-	/// <summary>
-	/// The column location of the ship
-	/// </summary>
-	/// <value>The leftmost(?) location of the ship</value>
-	/// <returns>the column of the ship</returns>
-	public int Column
-	{
-		get
+		/// <summary>
+		/// The column location of the ship
+		/// </summary>
+		/// <value>The leftmost(?) location of the ship</value>
+		/// <returns>the column of the ship</returns>
+		public int Column
 		{
-			return _col;
+			get
+			{
+				return _col;
+			}
 		}
-	}
 
-	/// <summary>
-	/// The direction of the ship
-	/// </summary>
-	/// <value>The direction of the ship</value>
-	/// <returns>The direction the ship is facing</returns>
-	public Direction Direction
-	{
-		get
+		/// <summary>
+		/// The direction of the ship
+		/// </summary>
+		/// <value>The direction of the ship</value>
+		/// <returns>The direction the ship is facing</returns>
+		public Direction Direction
 		{
-			return _direction;
+			get
+			{
+				return _direction;
+			}
 		}
-	}
 
-	/// <summary>
-	/// Builds a ship?
-	/// </summary>
-	/// <param name="ship">passed in ship to build?</param>
-	public Ship(ShipName ship)
-	{
-		_shipName = ship;
-		_tiles = new List<Tile>();
-
-		//gets the ship size from the enumarator
-		_sizeOfShip = _shipName;
-	}
-
-	/// <summary>
-	/// adds the ship tile
-	/// </summary>
-	/// <param name="tile">one of the tiles the ship is on</param>
-	public void AddTile(Tile tile)
-	{
-		_tiles.Add(tile);
-	}
-
-	/// <summary>
-	/// Remove clears the tile back to a sea tile
-	/// </summary>
-	public void Remove()
-	{
-		foreach (Tile tile in _tiles) {
-			tile.ClearShip();
-		}
-		_tiles.Clear();
-	}
-
-	/// <summary>
-	/// Increments the hitstaken variable
-	/// </summary>
-	public void Hit()
-	{
-		_hitsTaken = _hitsTaken + 1;
-	}
-
-	/// <summary>
-	/// IsDeployed returns if the ships is deployed, if its deplyed it has more than
-	/// 0 tiles
-	/// </summary>
-	public bool IsDeployed
-	{
-		get
+		/// <summary>
+		/// Builds a ship?
+		/// </summary>
+		/// <param name="ship">passed in ship to build?</param>
+		public Ship(ShipName ship)
 		{
-			return _tiles.Count > 0;
-		}
-	}
+			_shipName = ship;
+			_tiles = new List<Tile>();
 
-	/// <summary>
-	/// IsDestroyed returns if each tile a ship is on has been hit
-	/// </summary>
-	public bool IsDestroyed
-	{
-		get
+			//gets the ship size from the enumarator
+			_sizeOfShip = _shipName;
+		}
+
+		/// <summary>
+		/// adds the ship tile
+		/// </summary>
+		/// <param name="tile">one of the tiles the ship is on</param>
+		public void AddTile(Tile tile)
 		{
-			return Hits == Size;
+			_tiles.Add(tile);
 		}
-	}
 
-	/// <summary>
-	/// Record that the ship is now deployed.
-	/// </summary>
-	/// <param name="direction"></param>
-	/// <param name="row"></param>
-	/// <param name="col"></param>
-	internal void Deployed(Direction direction, int row, int col)
-	{
-		_row = row;
-		_col = col;
-		_direction = direction;
+		/// <summary>
+		/// Remove clears the tile back to a sea tile
+		/// </summary>
+		public void Remove()
+		{
+			foreach (Tile tile in _tiles) {
+				tile.ClearShip();
+			}
+			_tiles.Clear();
+		}
+
+		/// <summary>
+		/// Increments the hitstaken variable
+		/// </summary>
+		public void Hit()
+		{
+			_hitsTaken = _hitsTaken + 1;
+		}
+
+		/// <summary>
+		/// IsDeployed returns if the ships is deployed, if its deplyed it has more than
+		/// 0 tiles
+		/// </summary>
+		public bool IsDeployed
+		{
+			get
+			{
+				return _tiles.Count > 0;
+			}
+		}
+
+		/// <summary>
+		/// IsDestroyed returns if each tile a ship is on has been hit
+		/// </summary>
+		public bool IsDestroyed
+		{
+			get
+			{
+				return Hits == Size;
+			}
+		}
+
+		/// <summary>
+		/// Record that the ship is now deployed.
+		/// </summary>
+		/// <param name="direction"></param>
+		/// <param name="row"></param>
+		/// <param name="col"></param>
+		internal void Deployed(Direction direction, int row, int col)
+		{
+			_row = row;
+			_col = col;
+			_direction = direction;
+		}
 	}
 }

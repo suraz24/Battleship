@@ -1,8 +1,13 @@
 ﻿<Properties StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\DiscoveryController.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="8" Column="34" />
+      <File FileName="src\GameResources.cs" Line="18" Column="36" />
+      <File FileName="src\DiscoveryController.cs" Line="8" Column="16" />
+      <File FileName="src\Model\AIPlayer.cs" Line="2" Column="19" />
+      <File FileName="src\Model\Ship.cs" Line="4" Column="17" />
+      <File FileName="src\Model\Direction.cs" Line="20" Column="2" />
+      <File FileName="src\Model\ShipName.cs" Line="40" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
