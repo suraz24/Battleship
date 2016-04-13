@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+
+
+
 
 namespace MyGame
 {
@@ -26,7 +30,7 @@ public class SeaGrid : ISeaGrid
 	/// <summary>
 	/// The sea grid has changed and should be redrawn.
 	/// </summary>
-	public event EventHandler ISeaGrid.Changed;
+		public event EventHandler ISeaGrid.Changed;
 
 	/// <summary>
 	/// The width of the sea grid.

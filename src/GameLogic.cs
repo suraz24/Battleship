@@ -16,13 +16,13 @@ class GameLogic
 		//Load Resources
 		GameResources.LoadResources();
 
-		SwinGame.PlayMusic(GameMusic("Background"));
+		SwinGame.PlayMusic(GameResources.GameMusic("Background"));
 
 		//Game Loop
 		do {
-			HandleUserInput();
-			DrawScreen();
-		} while (!(SwinGame.WindowCloseRequested() == true | CurrentState == GameState.Quitting));
+			GameController.HandleUserInput();
+			GameController.DrawScreen();
+			} while (!(SwinGame.WindowCloseRequested() == true | GameController.CurrentState == GameState.Quitting));
 
 		SwinGame.StopMusic();
 
