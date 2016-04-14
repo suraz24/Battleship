@@ -26,3 +26,4 @@ C:\Users\suraz\Downloads\CSharp_SwinGame_3_6_XAMARIANSTUDIO\ProjectTemplate\bin\
 C:\Users\suraz\Downloads\CSharp_SwinGame_3_6_XAMARIANSTUDIO\ProjectTemplate\bin\Debug\EntityFramework.xml
 C:\Users\suraz\Downloads\CSharp_SwinGame_3_6_XAMARIANSTUDIO\ProjectTemplate\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\suraz\Downloads\CSharp_SwinGame_3_6_XAMARIANSTUDIO\ProjectTemplate\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\Lab5\Battleship\Battleship\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
