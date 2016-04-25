@@ -23,3 +23,29 @@ H:\Uni\Development_Project_1\Task\Pass7.2\BattleShipPerfect\bin\Debug\MyGame.pdb
 H:\Uni\Development_Project_1\Task\Pass7.2\BattleShipPerfect\bin\Debug\SwinGame.dll
 H:\Uni\Development_Project_1\Task\Pass7.2\BattleShipPerfect\obj\x86\Debug-Mac\MyGame.exe
 H:\Uni\Development_Project_1\Task\Pass7.2\BattleShipPerfect\obj\x86\Debug-Mac\MyGame.pdb
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\animations\startup.txt
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\bundles\FileDialog.txt
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\bundles\splash.txt
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\fonts\arial.ttf
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\fonts\cour.ttf
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\fonts\maven_pro_regular.ttf
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\panels\FileDialog.txt
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\sounds\error.wav
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\sounds\SwinGameStart.wav
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\SwinGame.icns
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\SwinGame.ico
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\fdFile.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\fdFolder.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\FileDialog_Active.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\FileDialog_Background.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\FileDialog_Inactive.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\FileDialog_Scroll.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\FileDialog_ScrollSmall.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\Swinburne.jpg
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\Resources\images\SwinGameAni.png
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\MyGame.exe
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\MyGame.pdb
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\Debug\SwinGame.dll
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.exe
+F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.pdb

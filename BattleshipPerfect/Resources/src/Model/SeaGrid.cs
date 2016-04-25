@@ -119,7 +119,8 @@ public class SeaGrid : ISeaGrid
 	/// <param name="newShip">the ship</param>
 	private void AddShip(int row, int col, Direction direction, Ship newShip)
 	{
-		try {
+		try 
+		{
 			int size = newShip.Size;
 			int currentRow = row;
 			int currentCol = col;
@@ -136,8 +137,10 @@ public class SeaGrid : ISeaGrid
 
 			//place ship's tiles in array and into ship object
 			int i = 0;
-			for (i = 0; i <= size - 1; i++) {
-				if (currentRow < 0 | currentRow >= Width | currentCol < 0 | currentCol >= Height) {
+			for (i = 0; i <= size - 1; i++) 
+			{
+				if (currentRow < 0 | currentRow >= Width | currentCol < 0 | currentCol >= Height) 
+				{
 					throw new InvalidOperationException("Ship can't fit on the board");
 				}
 
@@ -148,12 +151,16 @@ public class SeaGrid : ISeaGrid
 			}
 
 			newShip.Deployed(direction, row, col);
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			newShip.Remove();
 			//if fails remove the ship
 			throw new ApplicationException(e.Message);
 
-		} finally {
+		} 
+		finally 
+		{
 			if (Changed != null) {
 				Changed(this, EventArgs.Empty);
 			}

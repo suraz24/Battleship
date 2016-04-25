@@ -22,17 +22,20 @@ public class Ship
 	private int _col;
 
 	private Direction _direction;
+
 	/// <summary>
 	/// The type of ship
 	/// </summary>
 	/// <value>The type of ship</value>
 	/// <returns>The type of ship</returns>
-	public string Name {
-		get {
-			if (_shipName == ShipName.AircraftCarrier) {
+	public string Name 
+	{
+		get 
+		{
+			if (_shipName == ShipName.AircraftCarrier) 
+			{
 				return "Aircraft Carrier";
 			}
-
 			return _shipName.ToString();
 		}
 	}
@@ -42,8 +45,12 @@ public class Ship
 	/// </summary>
 	/// <value>The number of hits the ship can take</value>
 	/// <returns>The number of hits the ship can take</returns>
-	public int Size {
-		get { return _sizeOfShip; }
+	public int Size 
+	{
+		get 
+		{
+			return _sizeOfShip;
+		}
 	}
 
 	/// <summary>
@@ -52,8 +59,12 @@ public class Ship
 	/// <value>The number of hits the ship has taken.</value>
 	/// <returns>The number of hits the ship has taken</returns>
 	/// <remarks>When this equals Size the ship is sunk</remarks>
-	public int Hits {
-		get { return _hitsTaken; }
+	public int Hits 
+	{
+		get 
+		{ 
+			return _hitsTaken; 
+		}
 	}
 
 	/// <summary>
@@ -61,16 +72,28 @@ public class Ship
 	/// </summary>
 	/// <value>The topmost location of the ship</value>
 	/// <returns>the row of the ship</returns>
-	public int Row {
-		get { return _row; }
+	public int Row 
+	{
+		get 
+		{ 
+			return _row; 
+		}
 	}
 
-	public int Column {
-		get { return _col; }
+	public int Column
+	{
+		get
+		{ 
+			return _col;
+		}
 	}
 
-	public Direction Direction {
-		get { return _direction; }
+	public Direction Direction
+	{
+		get 
+		{ 
+			return _direction; 
+		}
 	}
 
 	public Ship(ShipName ship)
