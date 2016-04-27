@@ -49,3 +49,5 @@ F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\bin\
 F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.csprojResolveAssemblyReference.cache
 F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.exe
 F:\Libraries\Dropbox\Uni\Year 5\SDP\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.pdb
+C:\github\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.exe
+C:\github\Battleship\Battleship\BattleshipPerfect\obj\x86\Debug-Mac\MyGame.pdb
