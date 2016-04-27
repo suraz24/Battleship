@@ -60,6 +60,7 @@
     <Folder Include="Resources\" />
     <Folder Include="bin\" />
     <Folder Include="obj\" />
+    <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
@@ -272,37 +273,46 @@
     <None Include="Resources\sounds\SwinGameStart.ogg" />
     <None Include="Resources\sounds\watershot.wav" />
     <None Include="Resources\sounds\winner.wav" />
+    <None Include="build.sh" />
+    <None Include="clean.sh" />
+    <None Include="out.log" />
+    <None Include="run.sh" />
+    <None Include="packages\repositories.config" />
+    <None Include="packages\NUnit.2.6.4\license.txt" />
+    <None Include="packages\NUnit.2.6.4\NUnit.2.6.4.nupkg" />
+    <None Include="packages\NUnit.2.6.4\lib\nunit.framework.dll" />
+    <None Include="packages\NUnit.2.6.4\lib\nunit.framework.xml" />
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
     <Copy SourceFiles="@(WinLibraryFiles)" DestinationFolder="$(OutDir)" />
   </Target>
   <ItemGroup>
-    <Compile Include="Resources\src\DeploymentController.cs" />
-    <Compile Include="Resources\src\DiscoveryController.cs" />
-    <Compile Include="Resources\src\EndingGameController.cs" />
-    <Compile Include="Resources\src\GameController.cs" />
-    <Compile Include="Resources\src\GameLogic.cs" />
-    <Compile Include="Resources\src\GameResources.cs" />
-    <Compile Include="Resources\src\GameState.cs" />
-    <Compile Include="Resources\src\HighScoreController.cs" />
-    <Compile Include="Resources\src\MenuController.cs" />
-    <Compile Include="Resources\src\UtilityFunctions.cs" />
-    <Compile Include="Resources\src\Model\AIHardPlayer.cs" />
-    <Compile Include="Resources\src\Model\AIMediumPlayer.cs" />
-    <Compile Include="Resources\src\Model\AIOption.cs" />
-    <Compile Include="Resources\src\Model\AIPlayer.cs" />
-    <Compile Include="Resources\src\Model\AttackResult.cs" />
-    <Compile Include="Resources\src\Model\BattleShipsGame.cs" />
-    <Compile Include="Resources\src\Model\Direction.cs" />
-    <Compile Include="Resources\src\Model\ISeaGrid.cs" />
-    <Compile Include="Resources\src\Model\Player.cs" />
-    <Compile Include="Resources\src\Model\ResultOfAttack.cs" />
-    <Compile Include="Resources\src\Model\SeaGrid.cs" />
-    <Compile Include="Resources\src\Model\SeaGridAdapter.cs" />
-    <Compile Include="Resources\src\Model\Ship.cs" />
-    <Compile Include="Resources\src\Model\ShipName.cs" />
-    <Compile Include="Resources\src\Model\Tile.cs" />
-    <Compile Include="Resources\src\Model\TileView.cs" />
+    <Compile Include="src\DeploymentController.cs" />
+    <Compile Include="src\DiscoveryController.cs" />
+    <Compile Include="src\EndingGameController.cs" />
+    <Compile Include="src\GameController.cs" />
+    <Compile Include="src\GameLogic.cs" />
+    <Compile Include="src\GameResources.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\HighScoreController.cs" />
+    <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\Model\AIHardPlayer.cs" />
+    <Compile Include="src\Model\AIMediumPlayer.cs" />
+    <Compile Include="src\Model\AIOption.cs" />
+    <Compile Include="src\Model\AIPlayer.cs" />
+    <Compile Include="src\Model\AttackResult.cs" />
+    <Compile Include="src\Model\BattleShipsGame.cs" />
+    <Compile Include="src\Model\Direction.cs" />
+    <Compile Include="src\Model\ISeaGrid.cs" />
+    <Compile Include="src\Model\Player.cs" />
+    <Compile Include="src\Model\ResultOfAttack.cs" />
+    <Compile Include="src\Model\SeaGrid.cs" />
+    <Compile Include="src\Model\SeaGridAdapter.cs" />
+    <Compile Include="src\Model\Ship.cs" />
+    <Compile Include="src\Model\ShipName.cs" />
+    <Compile Include="src\Model\Tile.cs" />
+    <Compile Include="src\Model\TileView.cs" />
+    <Compile Include="src\UtilityFunctions.cs" />
   </ItemGroup>
 </Project>
