@@ -45,3 +45,5 @@ C:\Users\Zaid\Battleship\bin\Debug\MyGame.exe
 C:\Users\Zaid\Battleship\bin\Debug\SwinGame.dll
 C:\Users\Zaid\Battleship\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\Zaid\Battleship\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\Zaid\Battleship\bin\Debug\nunit.framework.dll
+C:\Users\Zaid\Battleship\bin\Debug\nunit.framework.xml
