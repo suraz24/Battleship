@@ -26,9 +26,7 @@
       <File FileName="src\GameLogic.cs" Line="1" Column="1" />
       <File FileName="src\GameState.cs" Line="1" Column="1" />
       <File FileName="src\HighScoreController.cs" Line="1" Column="1" />
-      <File FileName="src\MenuController.cs" Line="1" Column="1" />
-      <File FileName="src\UtilityFunctions.cs" Line="1" Column="1" />
-      <File FileName="src\UnitTest.cs" Line="22" Column="22" />
+      <File FileName="src\UnitTest.cs" Line="23" Column="19" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">
