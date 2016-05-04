@@ -47,9 +47,7 @@ static class DeploymentController
 	/// </remarks>
 	public static void HandleDeploymentInput()
 	{
-        MenuController.HandleDeployingMenuInput();
-
-        if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
+		if (SwinGame.KeyTyped(KeyCode.vk_ESCAPE)) {
 			GameController.AddNewState(GameState.ViewingGameMenu);
 		}
 
@@ -128,11 +126,11 @@ static class DeploymentController
 
 		//Draw the Left/Right and Up/Down buttons
 		if (_currentDirection == Direction.LeftRight) {
-            DrawBitmapWithTooltip("Direction (L/R)", GameResources.GameImage("LeftRightButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
+			SwinGame.DrawBitmap(GameResources.GameImage("LeftRightButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 			//SwinGame.DrawText("U/D", Color.Gray, GameFont("Menu"), UP_DOWN_BUTTON_LEFT, TOP_BUTTONS_TOP)
 			//SwinGame.DrawText("L/R", Color.White, GameFont("Menu"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP)
 		} else {
-            DrawBitmapWithTooltip("Direction (U/D)", GameResources.GameImage("UpDownButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
+			SwinGame.DrawBitmap(GameResources.GameImage("UpDownButton"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP);
 			//SwinGame.DrawText("U/D", Color.White, GameFont("Menu"), UP_DOWN_BUTTON_LEFT, TOP_BUTTONS_TOP)
 			//SwinGame.DrawText("L/R", Color.Gray, GameFont("Menu"), LEFT_RIGHT_BUTTON_LEFT, TOP_BUTTONS_TOP)
 		}
@@ -161,26 +159,16 @@ static class DeploymentController
 			//SwinGame.DrawText("PLAY", Color.Black, GameFont("Courier"), PLAY_BUTTON_LEFT + TEXT_OFFSET, PLAY_BUTTON_TOP)
 		}
 
-        DrawBitmapWithTooltip("Random Placement", GameResources.GameImage("RandomButton"), RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
-        UtilityFunctions.DrawMessage();
+		SwinGame.DrawBitmap(GameResources.GameImage("RandomButton"), RANDOM_BUTTON_LEFT, TOP_BUTTONS_TOP);
+
+		UtilityFunctions.DrawMessage();
 	}
-    
-    /// <summary>
-    /// Show tooltip text above image when mouse pointer hovers over it 
-    /// </summary>
-    private static void DrawBitmapWithTooltip(string s, Bitmap bits, int xPos, int yPos) {
-        SwinGame.DrawBitmap(bits, xPos, yPos);
 
-        if (UtilityFunctions.IsMouseInRectangle(xPos, yPos, bits.Width, bits.Height)) {
-            SwinGame.DrawText(s, Color.Yellow, GameResources.GameFont("Menu"), xPos, yPos);
-        }
-    }
-
-    /// <summary>
-    /// Gets the ship that the mouse is currently over in the selection panel.
-    /// </summary>
-    /// <returns>The ship selected or none</returns>
-    private static ShipName GetShipMouseIsOver()
+	/// <summary>
+	/// Gets the ship that the mouse is currently over in the selection panel.
+	/// </summary>
+	/// <returns>The ship selected or none</returns>
+	private static ShipName GetShipMouseIsOver()
 	{
 		foreach (ShipName sn in Enum.GetValues(typeof(ShipName))) {
 			int i = 0;

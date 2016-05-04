@@ -157,6 +157,7 @@ static class HighScoreController
 	public static void HandleHighScoreInput()
 	{
 		if (SwinGame.MouseClicked(MouseButton.LeftButton) || SwinGame.KeyTyped(KeyCode.vk_ESCAPE) || SwinGame.KeyTyped(KeyCode.vk_RETURN)) {
+			//SaveScores ();
 			GameController.EndCurrentState();
 		}
 	}
@@ -173,40 +174,60 @@ static class HighScoreController
 		const int ENTRY_TOP = 500;
 
 		if (_Scores.Count == 0)
-			LoadScores();
+			LoadScores ();
 
 		//is it a high score
-		if (value > _Scores[_Scores.Count - 1].Value) {
-			Score s = new Score();
+		if (value > _Scores [_Scores.Count - 1].Value)
+		{
+			Score s = new Score ();
 			s.Value = value;
 
-			GameController.AddNewState(GameState.ViewingHighScores);
+			GameController.AddNewState (GameState.ViewingHighScores);
 
 			int x = 0;
-			x = SCORES_LEFT + SwinGame.TextWidth(GameResources.GameFont("Courier"), "Name: ");
+			x = SCORES_LEFT + SwinGame.TextWidth (GameResources.GameFont ("Courier"), "Name: ");
 
-			SwinGame.StartReadingText(Color.White, NAME_WIDTH, GameResources.GameFont("Courier"), x, ENTRY_TOP);
+			SwinGame.StartReadingText (Color.White, NAME_WIDTH, GameResources.GameFont ("Courier"), x, ENTRY_TOP);
 
 			//Read the text from the user
-			while (SwinGame.ReadingText()) {
-				SwinGame.ProcessEvents();
+			while (SwinGame.ReadingText ())
+			{
+				SwinGame.ProcessEvents ();
 
-				UtilityFunctions.DrawBackground();
-				DrawHighScores();
-				SwinGame.DrawText("Name: ", Color.White, GameResources.GameFont("Courier"), SCORES_LEFT, ENTRY_TOP);
-				SwinGame.RefreshScreen();
+				UtilityFunctions.DrawBackground ();
+				DrawHighScores ();
+				SwinGame.DrawText ("Name: ", Color.White, GameResources.GameFont ("Courier"), SCORES_LEFT, ENTRY_TOP);
+				SwinGame.RefreshScreen ();
 			}
 
-			s.Name = SwinGame.TextReadAsASCII();
+			s.Name = SwinGame.TextReadAsASCII ();
 
-			if (s.Name.Length < 3) {
-				s.Name = s.Name + new string(Convert.ToChar(" "), 3 - s.Name.Length);
+			if (s.Name.Length < 3)
+			{
+				s.Name = s.Name + new string (Convert.ToChar (" "), 3 - s.Name.Length);
 			}
 
-			_Scores.RemoveAt(_Scores.Count - 1);
-			_Scores.Add(s);
-			_Scores.Sort();
+			_Scores.RemoveAt (_Scores.Count - 1);
+			_Scores.Add (s);
+			_Scores.Sort ();
 
+			SaveScores ();
+			GameController.EndCurrentState ();
+		}
+			
+	}
+
+	public static void ViewCredits()
+	{
+		UtilityFunctions.DrawBackground ();
+
+		SwinGame.DrawTextLines("Made Amazing by:", Color.White, Color.Transparent, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 150, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+		SwinGame.DrawTextLines("BattleShip Group 5", Color.White, Color.Transparent, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 250, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+		SwinGame.DrawTextLines("WED 12:30 group", Color.White, Color.Transparent, GameResources.GameFont("ArialLarge"), FontAlignment.AlignCenter, 0, 350, SwinGame.ScreenWidth(), SwinGame.ScreenHeight());
+
+
+		if (SwinGame.KeyDown(KeyCode.vk_SPACE))
+		{
 			GameController.EndCurrentState();
 		}
 	}

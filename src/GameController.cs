@@ -23,31 +23,22 @@ public static class GameController
 	private static Stack<GameState> _state = new Stack<GameState>();
 
 	private static AIOption _aiSetting;
+	/// <summary>
+	/// Returns the current state of the game, indicating which screen is
+	/// currently being used
+	/// </summary>
+	/// <value>The current state</value>
+	/// <returns>The current state</returns>
+	public static GameState CurrentState {
+		get { return _state.Peek(); }
+	}
 
-    /// <summary>
-    /// ai setting
-    /// </summary>
-    /// <returns>The current ai setting</returns>
-    public static AIOption CurrentAiSetting {
-        get { return _aiSetting; }
-    }
-
-    /// <summary>
-    /// Returns the current state of the game, indicating which screen is
-    /// currently being used
-    /// </summary>
-    /// <value>The current state</value>
-    /// <returns>The current state</returns>
-    public static GameState CurrentState {
-        get { return _state.Peek(); }
-    }
-
-    /// <summary>
-    /// Returns the human player.
-    /// </summary>
-    /// <value>the human player</value>
-    /// <returns>the human player</returns>
-    public static Player HumanPlayer {
+	/// <summary>
+	/// Returns the human player.
+	/// </summary>
+	/// <value>the human player</value>
+	/// <returns>the human player</returns>
+	public static Player HumanPlayer {
 		get { return _human; }
 	}
 
@@ -62,27 +53,20 @@ public static class GameController
 
 	static GameController()
 	{
-        SetupInitialStateStack();
-    }
+		//bottom state will be quitting. If player exits main menu then the game is over
+		_state.Push(GameState.Quitting);
 
-    static public void SetupInitialStateStack()
-    {
-        _state.Clear(); // for NUnit testing, each test needs a clean slate for predictability 
+		//at the start the player is viewing the main menu
+		_state.Push(GameState.ViewingMainMenu);
+	}
 
-        //bottom state will be quitting. If player exits main menu then the game is over
-        _state.Push(GameState.Quitting);
-
-        //at the start the player is viewing the main menu
-        _state.Push(GameState.ViewingMainMenu);
-    }
-
-    /// <summary>
-    /// Starts a new game.
-    /// </summary>
-    /// <remarks>
-    /// Creates an AI player based upon the _aiSetting.
-    /// </remarks>
-    public static void StartGame()
+	/// <summary>
+	/// Starts a new game.
+	/// </summary>
+	/// <remarks>
+	/// Creates an AI player based upon the _aiSetting.
+	/// </remarks>
+	public static void StartGame()
 	{
 		if (_theGame != null)
 			EndGame();
@@ -300,7 +284,7 @@ public static class GameController
 				MenuController.HandleSetupMenuInput();
 				break;
 			case GameState.Deploying:
-                DeploymentController.HandleDeploymentInput();
+				DeploymentController.HandleDeploymentInput();
 				break;
 			case GameState.Discovering:
 				DiscoveryController.HandleDiscoveryInput();
@@ -338,7 +322,6 @@ public static class GameController
 				break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
-                MenuController.DrawDeploymentMenu();
 				break;
 			case GameState.Discovering:
 				DiscoveryController.DrawDiscovery();
