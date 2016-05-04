@@ -132,7 +132,7 @@ public static class GameResources
 
 		SwinGame.ChangeScreenSize(800, 600);
 
-		ShowLoadingScreen();
+		//ShowLoadingScreen();
 
 		ShowMessage("Loading fonts...", 0);
 		LoadFonts();

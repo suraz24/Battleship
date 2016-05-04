@@ -68,6 +68,9 @@
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\animations\startup.txt">
@@ -282,6 +285,10 @@
     <None Include="packages\NUnit.2.6.4\NUnit.2.6.4.nupkg" />
     <None Include="packages\NUnit.2.6.4\lib\nunit.framework.dll" />
     <None Include="packages\NUnit.2.6.4\lib\nunit.framework.xml" />
+<<<<<<< HEAD
+=======
+    <None Include="packages.config" />
+>>>>>>> origin
   </ItemGroup>
   <Target Name="CopyFiles">
     <Copy SourceFiles="@(MacLibraryFiles)" DestinationFolder="$(OutDir)" />
@@ -296,7 +303,10 @@
     <Compile Include="src\GameResources.cs" />
     <Compile Include="src\GameState.cs" />
     <Compile Include="src\HighScoreController.cs" />
+<<<<<<< HEAD
     <Compile Include="src\MenuController.cs" />
+=======
+>>>>>>> origin
     <Compile Include="src\Model\AIHardPlayer.cs" />
     <Compile Include="src\Model\AIMediumPlayer.cs" />
     <Compile Include="src\Model\AIOption.cs" />
@@ -314,5 +324,10 @@
     <Compile Include="src\Model\Tile.cs" />
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\UtilityFunctions.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="src\UnitTest.cs" />
+    <Compile Include="src\MenuController.cs" />
+>>>>>>> origin
   </ItemGroup>
 </Project>
