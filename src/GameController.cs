@@ -182,20 +182,24 @@ public static class GameController
 				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
 
 				break;
-			case ResultOfAttack.GameOver:
-				PlayHitSequence(result.Row, result.Column, isHuman);
-				Audio.PlaySoundEffect(GameResources.GameSound("Sink"));
+		case ResultOfAttack.GameOver:
+			PlayHitSequence (result.Row, result.Column, isHuman);
+			Audio.PlaySoundEffect (GameResources.GameSound ("Sink"));
 
-				while (Audio.SoundEffectPlaying(GameResources.GameSound("Sink"))) {
-					SwinGame.Delay(10);
-					SwinGame.RefreshScreen();
-				}
+			while (Audio.SoundEffectPlaying (GameResources.GameSound ("Sink")))
+			{
+				SwinGame.Delay (5);
+				SwinGame.RefreshScreen ();
+			}
 
-				if (HumanPlayer.IsDestroyed) {
-					Audio.PlaySoundEffect(GameResources.GameSound("Lose"));
-				} else {
-					Audio.PlaySoundEffect(GameResources.GameSound("Winner"));
-				}
+			if (HumanPlayer.IsDestroyed)
+			{
+				Audio.PlaySoundEffect (GameResources.GameSound ("Lose"));
+			}
+			else
+			{
+				Audio.PlaySoundEffect (GameResources.GameSound ("Winner"));
+			}
 
 				break;
 			case ResultOfAttack.Hit:
@@ -348,6 +352,9 @@ public static class GameController
 				break;
 			case GameState.ViewingHighScores:
 				HighScoreController.DrawHighScores();
+				break;
+			case GameState.ViewingCredits:
+				HighScoreController.ViewCredits();
 				break;
 		}
 

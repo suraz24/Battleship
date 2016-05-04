@@ -49,6 +49,11 @@ public enum GameState
 	EndingGame,
 
 	/// <summary>
+	/// The viewing credits.
+	/// </summary>
+	ViewingCredits,
+
+	/// <summary>
 	/// The player has quit. Show ending credits and terminate the game
 	/// </summary>
 	Quitting
