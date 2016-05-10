@@ -9,6 +9,24 @@ using SwinGameSDK;
 
 public static class GameResources
 {
+	public static bool Muted = false;
+
+    public static void MuteButtonPressed() 
+    {
+        Muted = !Muted;
+
+        if (Muted) {
+            foreach (var kvp in _Sounds) {
+                Audio.StopSoundEffect(kvp.Value);
+            }
+
+            Audio.StopSoundEffect(_StartSound);
+            Audio.SetMusicVolume(0f);
+        } else {
+            Audio.SetMusicVolume(1f);
+            Audio.PlaySoundEffect(_StartSound);
+        }
+    }
 
 	private static void LoadFonts()
 	{

@@ -24,6 +24,8 @@ public static class GameController
 
 	private static AIOption _aiSetting;
 
+	public static Timer HighlightTimer = SwinGame.CreateTimer();
+
     /// <summary>
     /// ai setting
     /// </summary>
@@ -62,6 +64,7 @@ public static class GameController
 
 	static GameController()
 	{
+		SwinGame.StartTimer(HighlightTimer);
         SetupInitialStateStack();
     }
 

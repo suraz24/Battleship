@@ -19,7 +19,8 @@ public static class MenuController
     private const int MENU_TOP = 575;
     private const int MENU_LEFT = 30;
     private const int MENU_GAP = 0;
-    private const int BUTTON_WIDTH = 90;
+    //private const int BUTTON_WIDTH = 90;
+    private const int BUTTON_WIDTH = 75;
     private const int BUTTON_HEIGHT = 15;
     private const int BUTTON_SEP = BUTTON_WIDTH + MENU_GAP;
     private const int TEXT_OFFSET = 0;
@@ -37,6 +38,7 @@ public static class MenuController
 			"SETUP",
 			"SCORES",
 			"OPTION",
+			"MUTE",
 			"QUIT"
 		},
         // GAME_MENU 
@@ -68,12 +70,14 @@ public static class MenuController
     private const int SETUP_MENU = 2;
     public const int DEPLOYING_MENU = 3;
 	private const int OPTION_MENU = 4;
+	private const int MUTE_MENU = 5;
 
     private const int MAIN_MENU_PLAY_BUTTON = 0;
 	private const int MAIN_MENU_SETUP_BUTTON = 1;
 	private const int MAIN_MENU_TOP_SCORES_BUTTON = 2;
 	private const int MAIN_MENU_OPTION_BUTTON = 3;
-	private const int MAIN_MENU_QUIT_BUTTON = 4;
+	private const int MAIN_MENU_MUTE_BUTTON = 4;
+	private const int MAIN_MENU_QUIT_BUTTON = 5;
 
 	public const int SETUP_MENU_EASY_BUTTON = 0;
     public const int SETUP_MENU_MEDIUM_BUTTON = 1;
@@ -275,6 +279,37 @@ public static class MenuController
 				SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
 			}
 		}
+
+		for (int i = 0; i < _menuStructure[menu].Length; i++) {
+            string btnText = _menuStructure[menu][i];
+            int btnLeft = MENU_LEFT + BUTTON_SEP * (i + xOffset);
+            float x = btnLeft + TEXT_OFFSET;
+            float y = btnTop + TEXT_OFFSET;
+            int w = BUTTON_WIDTH;
+            int h = BUTTON_HEIGHT;
+            //SwinGame.FillRectangle(Color.White, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
+
+            if (GameResources.Muted && i == MAIN_MENU_MUTE_BUTTON)
+                btnText = "UNMUTE";
+
+            if (IsMouseOverMenu(i, level, xOffset)) {
+                const int numExpandFrames = 9; // 9 would gives us 0 1 2 3 4 3 2 1 0 (when we're done setting up "expExt") 
+                int expExt = (int)(GameController.HighlightTimer.Ticks/66) % numExpandFrames; // expansion extent (num of pixels outward from normal size) 
+                if (expExt > numExpandFrames/2) {
+                    expExt = (numExpandFrames - 1) - expExt;
+                }
+
+                SwinGame.DrawTextLines(btnText, Color.Yellow, Color.Black, GameResources.GameFont("Menu"), 
+                    FontAlignment.AlignCenter, x, y-expExt/2+expExt, w, h+expExt*2);
+
+                if (SwinGame.MouseDown(MouseButton.LeftButton)) {
+                    SwinGame.DrawRectangle(HIGHLIGHT_COLOR, btnLeft, btnTop, BUTTON_WIDTH, BUTTON_HEIGHT);
+                }
+            }else{
+                SwinGame.DrawTextLines(btnText, MENU_COLOR, Color.Black, GameResources.GameFont("Menu"), 
+                    FontAlignment.AlignCenter, x, y, w, h);
+            }
+        }
 	}
 
 	/// <summary>
@@ -346,6 +381,9 @@ public static class MenuController
 				break;
 			case MAIN_MENU_OPTION_BUTTON:
 				GameController.AddNewState(GameState.AlteringOption);
+				break;
+			case MAIN_MENU_MUTE_BUTTON:
+				GameResources.MuteButtonPressed();
 				break;
 			case MAIN_MENU_QUIT_BUTTON:
 				GameController.EndCurrentState();
