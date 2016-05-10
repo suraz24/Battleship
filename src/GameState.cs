@@ -34,11 +34,6 @@ public enum GameState
 	AlteringSettings,
 
 	/// <summary>
-	/// The player is altering the game of options (fullscreen and window borderless)
-	/// </summary>
-	AlteringOption,
-
-	/// <summary>
 	/// Players are deploying their ships
 	/// </summary>
 	Deploying,

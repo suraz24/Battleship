@@ -24,6 +24,8 @@ public static class GameController
 
 	private static AIOption _aiSetting;
 
+    public static Timer HighlightTimer = SwinGame.CreateTimer();
+
     /// <summary>
     /// ai setting
     /// </summary>
@@ -60,13 +62,12 @@ public static class GameController
 		get { return _ai; }
 	}
 
-	static GameController()
-	{
+	static GameController()	{
+        SwinGame.StartTimer(HighlightTimer);
         SetupInitialStateStack();
     }
 
-    static public void SetupInitialStateStack()
-    {
+    static public void SetupInitialStateStack() {
         _state.Clear(); // for NUnit testing, each test needs a clean slate for predictability 
 
         //bottom state will be quitting. If player exits main menu then the game is over
@@ -299,9 +300,6 @@ public static class GameController
 			case GameState.AlteringSettings:
 				MenuController.HandleSetupMenuInput();
 				break;
-			case GameState.AlteringOption:
-				MenuController.HandleOptionMenuInput();
-				break;
 			case GameState.Deploying:
                 DeploymentController.HandleDeploymentInput();
 				break;
@@ -338,9 +336,6 @@ public static class GameController
 				break;
 			case GameState.AlteringSettings:
 				MenuController.DrawSettings();
-				break;
-			case GameState.AlteringOption:
-				MenuController.DrawOption();
 				break;
 			case GameState.Deploying:
 				DeploymentController.DrawDeployment();
