@@ -109,6 +109,9 @@ public static class GameController
 			case AIOption.Easy:
 				_ai = new AIEasyPlayer(_theGame);
 				break;
+			default:
+				_ai = new AIMediumPlayer(_theGame);
+				break;
 		}
 
 		_human = new Player(_theGame);
