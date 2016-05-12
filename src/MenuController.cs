@@ -424,6 +424,7 @@ public static class MenuController
                 GameController.EndCurrentState();
                 break;
             case GAME_MENU_SURRENDER_BUTTON:
+                SwinGame.PlayMusic(GameResources.GameMusic("Menu"));
                 GameController.EndCurrentState(); // end game menu
                 GameController.EndCurrentState(); // end game
                 break;
@@ -443,6 +444,7 @@ public static class MenuController
         {
             case DEPLOYING_MENU_BACK_BUTTON:
                 GameController.EndCurrentState();
+                SwinGame.PlayMusic(GameResources.GameMusic("Menu"));
                 break;
         }
     }

@@ -89,9 +89,10 @@ public static class GameController
 	{
 		if (_theGame != null)
 			EndGame();
+        SwinGame.PlayMusic(GameResources.GameMusic("Game"));
 
-		//Create the game
-		_theGame = new BattleShipsGame();
+        //Create the game
+        _theGame = new BattleShipsGame();
 
 		//create the players
 		switch (_aiSetting) {

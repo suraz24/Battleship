@@ -16,10 +16,10 @@ static class GameLogic
 		//Load Resources
 		GameResources.LoadResources();
 
-		SwinGame.PlayMusic(GameResources.GameMusic("Background"));
+        SwinGame.PlayMusic(GameResources.GameMusic("Menu"));
 
-		//Game Loop
-		do {
+        //Game Loop
+        do {
 			GameController.HandleUserInput();
 			GameController.DrawScreen();
 		} while (!(SwinGame.WindowCloseRequested() == true | GameController.CurrentState == GameState.Quitting));

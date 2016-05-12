@@ -232,7 +232,8 @@
     <None Include="bin\Debug\Resources\panels\FileDialog.txt" />
     <None Include="bin\Debug\Resources\sounds\error.wav" />
     <None Include="bin\Debug\Resources\sounds\hit.wav" />
-    <None Include="bin\Debug\Resources\sounds\horrordrone.mp3" />
+    <None Include="bin\Debug\Resources\sounds\gamemusic.mp3" />
+	<None Include="bin\Debug\Resources\sounds\mainmenumusic.mp3" />
     <None Include="bin\Debug\Resources\sounds\lose.wav" />
     <None Include="bin\Debug\Resources\sounds\sink.wav" />
     <None Include="bin\Debug\Resources\sounds\SwinGameStart.ogg" />
@@ -267,7 +268,8 @@
     <None Include="Resources\images\SplashBack.png" />
     <None Include="Resources\images\SwinGameAni.jpg" />
     <None Include="Resources\sounds\hit.wav" />
-    <None Include="Resources\sounds\horrordrone.mp3" />
+    <None Include="Resources\sounds\gamemusic.mp3" />
+	<None Include="Resources\sounds\mainmenumusic.mp3" />
     <None Include="Resources\sounds\lose.wav" />
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\SwinGameStart.ogg" />
