@@ -233,7 +233,7 @@
     <None Include="bin\Debug\Resources\sounds\error.wav" />
     <None Include="bin\Debug\Resources\sounds\hit.wav" />
     <None Include="bin\Debug\Resources\sounds\gamemusic.mp3" />
-	<None Include="bin\Debug\Resources\sounds\mainmenumusic.mp3" />
+    <None Include="bin\Debug\Resources\sounds\mainmenumusic.mp3" />
     <None Include="bin\Debug\Resources\sounds\lose.wav" />
     <None Include="bin\Debug\Resources\sounds\sink.wav" />
     <None Include="bin\Debug\Resources\sounds\SwinGameStart.ogg" />
@@ -269,7 +269,7 @@
     <None Include="Resources\images\SwinGameAni.jpg" />
     <None Include="Resources\sounds\hit.wav" />
     <None Include="Resources\sounds\gamemusic.mp3" />
-	<None Include="Resources\sounds\mainmenumusic.mp3" />
+    <None Include="Resources\sounds\mainmenumusic.mp3" />
     <None Include="Resources\sounds\lose.wav" />
     <None Include="Resources\sounds\sink.wav" />
     <None Include="Resources\sounds\SwinGameStart.ogg" />
@@ -317,6 +317,7 @@
     <Compile Include="src\Model\TileView.cs" />
     <Compile Include="src\UtilityFunctions.cs" />
     <Compile Include="src\MenuController.cs" />
+    <Compile Include="src\Model\AIEasyPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
