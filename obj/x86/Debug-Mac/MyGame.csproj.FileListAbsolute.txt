@@ -79,3 +79,5 @@ C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\Lab6\Battleship\Bat
 C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\Lab6\Battleship\Battleship\bin\Debug\nunit.framework.dll
 C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\Lab6\Battleship\Battleship\bin\Debug\SwinGame.dll
 C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\Lab6\Battleship\Battleship\bin\Debug\nunit.framework.xml
+C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\lab7\7.2\Battleship\Battleship\obj\x86\Debug-Mac\MyGame.exe
+C:\Users\suraz\OneDrive\Year 3 Sem1\DP1- Tools and Practices\lab7\7.2\Battleship\Battleship\obj\x86\Debug-Mac\MyGame.pdb
